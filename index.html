@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechSupport | The right laptop for the work you do</title>
+  <meta name="description" content="Browse business and productivity laptops from TechSupport, find the one that fits how you work, and send an enquiry to our sales team." />
+  <meta name="theme-color" content="#f5f1e8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #f5f1e8;
+      --card: #fffdf8;
+      --sand: #ece5d6;
+      --ink: #1a1712;
+      --ink-soft: #5c554a;
+      --line: #dcd3c1;
+      --line-strong: #1a1712;
+      --accent: #c8431a;
+      --accent-hover: #a83814;
+      --accent-soft: #fbe6da;
+      --success: #1f6b4a;
+      --success-soft: #dcefe4;
+      --danger: #b42318;
+      --danger-soft: #fde7e4;
+
+      --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+      --font-body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+
+      --wrap: 1200px;
+      --radius: 14px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.6;
+      color: var(--ink); background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    p { margin: 0; }
+    h1, h2, h3, h4 { margin: 0; font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 32px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .mono { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .02em; text-transform: uppercase; }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      font: 600 .98rem/1 var(--font-body); text-decoration: none; cursor: pointer;
+      padding: 15px 22px; border-radius: 999px; border: 2px solid var(--ink);
+      transition: background-color .18s, color .18s, box-shadow .18s, transform .12s;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-accent { color: #fff; background: var(--accent); border-color: var(--accent); }
+    .btn-accent:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+    .btn-ink { color: var(--paper); background: var(--ink); }
+    .btn-ink:hover { background: #3a342a; border-color: #3a342a; }
+    .btn-line { color: var(--ink); background: transparent; }
+    .btn-line:hover { background: var(--ink); color: var(--paper); }
+    .btn-block { width: 100%; }
+    .btn[disabled] { opacity: .6; cursor: not-allowed; }
+    .btn .arrow { transition: transform .2s var(--ease); }
+    .btn:hover .arrow { transform: translateX(3px); }
+
+    /* ---------- header ---------- */
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(245, 241, 232, .94); border-bottom: 1px solid var(--line); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .header-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 70px; position: relative; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; color: #fff; background: var(--accent); }
+    .brand-name { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.04em; }
+    .nav { display: flex; align-items: center; gap: 6px; }
+    .nav-links { display: flex; list-style: none; margin: 0; padding: 0; gap: 2px; }
+    .nav-links a { display: block; padding: 9px 14px; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: .95rem; color: var(--ink-soft); transition: color .15s, background-color .15s; }
+    .nav-links a:hover { color: var(--ink); background: var(--sand); }
+    .nav .btn { padding: 11px 18px; margin-left: 8px; }
+    .nav-toggle { display: none; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--ink); background: transparent; cursor: pointer; place-items: center; color: var(--ink); }
+    .nav-toggle .bars { display: grid; gap: 4px; }
+    .nav-toggle .bar { width: 16px; height: 2px; background: currentColor; border-radius: 2px; transition: transform .25s var(--ease), opacity .2s; }
+    .nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ---------- hero ---------- */
+    .hero { padding: 72px 0 88px; border-bottom: 1px solid var(--line); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--accent); }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+    .hero h1 { margin-top: 22px; font-size: clamp(2.7rem, 6.2vw, 5rem); font-weight: 800; letter-spacing: -0.05em; line-height: .98; }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero-lead { margin-top: 26px; max-width: 33em; font-size: 1.15rem; color: var(--ink-soft); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .hero-points { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 38px 0 0; padding: 0; list-style: none; color: var(--ink-soft); font-size: .93rem; }
+    .hero-points li { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-points svg { color: var(--success); flex: none; }
+
+    /* need picker */
+    .finder { background: var(--card); border: 2px solid var(--ink); border-radius: 22px; box-shadow: 8px 8px 0 var(--ink); overflow: hidden; }
+    .finder-head { padding: 20px 22px 16px; border-bottom: 1px solid var(--line); }
+    .finder-head h2 { font-size: 1.3rem; letter-spacing: -0.02em; }
+    .finder-head p { margin-top: 4px; font-size: .92rem; color: var(--ink-soft); }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .chip { font: 500 .88rem/1 var(--font-body); padding: 10px 14px; border-radius: 999px; cursor: pointer; color: var(--ink); background: var(--paper); border: 1.5px solid var(--line); transition: border-color .15s, background-color .15s, color .15s; }
+    .chip:hover { border-color: var(--ink); }
+    .chip[aria-pressed="true"] { color: #fff; background: var(--ink); border-color: var(--ink); }
+    .finder-result { padding: 18px 22px 22px; transition: opacity .25s var(--ease), transform .3s var(--ease); }
+    .finder-result.swap { opacity: 0; transform: translateY(6px); }
+    .finder-top { display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; }
+    .finder-media { background: var(--sand); border-radius: 12px; padding: 14px 10px 8px; }
+    .finder-match { color: var(--success); }
+    .finder-name { display: block; margin-top: 4px; font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+    .finder-why { margin-top: 6px; font-size: .9rem; color: var(--ink-soft); }
+    .finder-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 16px 0 0; border-top: 1px solid var(--line); }
+    .finder-specs div { padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .finder-specs div:nth-child(odd) { padding-right: 12px; }
+    .finder-specs dt { color: var(--ink-soft); }
+    .finder-specs dd { margin: 2px 0 0; font-weight: 600; font-size: .93rem; }
+    .finder-foot { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 16px; }
+    .finder-price { font-family: var(--font-display); font-size: 1.55rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+    .finder-price small { display: block; margin-top: 5px; font-family: var(--font-body); font-size: .76rem; font-weight: 400; letter-spacing: 0; color: var(--ink-soft); }
+    .finder-foot .btn { padding: 12px 18px; font-size: .92rem; }
+
+    /* ---------- sections ---------- */
+    .section { padding: 104px 0; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; margin-bottom: 48px; }
+    .section-title { margin-top: 14px; font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: -0.04em; }
+    .section-intro { font-size: 1.06rem; color: var(--ink-soft); max-width: 34em; }
+    .section-label { color: var(--accent); }
+
+    /* ---------- product rows ---------- */
+    .lineup { border-top: 2px solid var(--ink); }
+    .product-row {
+      display: grid; grid-template-columns: 56px 240px minmax(0, 1fr) 230px; gap: 32px; align-items: center;
+      padding: 32px 0; border-bottom: 1px solid var(--line); transition: background-color .2s;
+    }
+    .product-row:hover { background: linear-gradient(90deg, transparent, rgba(236, 229, 214, .55) 20%, rgba(236, 229, 214, .55) 80%, transparent); }
+    .row-index { font-family: var(--font-mono); font-size: .9rem; color: var(--ink-soft); align-self: start; padding-top: 6px; }
+    .row-media { background: var(--sand); border-radius: var(--radius); padding: 22px 18px 12px; aspect-ratio: 4 / 3; display: grid; place-items: center; }
+    .row-media svg, .row-media img { width: 100%; height: 100%; object-fit: contain; }
+    .tag { display: inline-block; padding: 5px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-hover); }
+    .product-name { margin-top: 12px; font-size: 1.9rem; letter-spacing: -0.04em; }
+    .product-desc { margin-top: 8px; color: var(--ink-soft); max-width: 40em; }
+    .spec-line { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 20px 0 0; border: 1px solid var(--line); border-radius: 12px; background: var(--card); overflow: hidden; }
+    .spec-line div { padding: 11px 14px; }
+    .spec-line div + div { border-left: 1px solid var(--line); }
+    .spec-line dt { color: var(--ink-soft); font-size: .7rem; }
+    .spec-line dd { margin: 3px 0 0; font-weight: 600; font-size: .93rem; line-height: 1.3; }
+    .row-side { align-self: stretch; display: flex; flex-direction: column; justify-content: center; padding-left: 28px; border-left: 1px dashed var(--line); }
+    .price-label { color: var(--ink-soft); }
+    .price { display: block; margin-top: 6px; font-family: var(--font-display); font-size: 2rem; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+    .price-note { margin-top: 10px; font-size: .8rem; color: var(--ink-soft); }
+    .row-side .btn { margin-top: 18px; }
+
+    /* ---------- compare ---------- */
+    .compare { margin-top: 72px; }
+    .compare-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    .compare-head h3 { font-size: 1.4rem; }
+    .table-scroll { overflow-x: auto; border: 2px solid var(--ink); border-radius: 18px; background: var(--card); }
+    .compare table { width: 100%; min-width: 640px; border-collapse: collapse; }
+    .compare th, .compare td { padding: 15px 20px; text-align: left; border-bottom: 1px solid var(--line); font-size: .95rem; }
+    .compare thead th { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.02em; background: var(--sand); border-bottom: 2px solid var(--ink); }
+    .compare tbody th { font-family: var(--font-mono); font-size: .74rem; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; color: var(--ink-soft); width: 20%; }
+    .compare tbody tr:last-child > * { border-bottom: 0; }
+    .compare tbody tr:last-child td { font-weight: 700; color: var(--accent-hover); }
+
+    /* ---------- why ---------- */
+    .why { background: var(--ink); color: var(--paper); }
+    .why .section-intro { color: #bdb4a4; }
+    .why .section-label { color: #ff8a5c; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #3d372d; }
+    .why-item { padding: 32px 28px 8px 0; }
+    .why-item + .why-item { padding-left: 28px; border-left: 1px solid #3d372d; }
+    .why-num { font-family: var(--font-display); font-size: 3rem; font-weight: 800; letter-spacing: -0.05em; line-height: 1; color: #ff8a5c; }
+    .why-item h3 { margin-top: 22px; font-size: 1.2rem; letter-spacing: -0.02em; }
+    .why-item p { margin-top: 10px; font-size: .95rem; color: #bdb4a4; }
+
+    /* ---------- about ---------- */
+    .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; }
+    .about-text p { margin-top: 18px; font-size: 1.05rem; color: var(--ink-soft); max-width: 36em; }
+    .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: step; }
+    .steps li { counter-increment: step; display: grid; grid-template-columns: 52px 1fr; gap: 18px; align-items: start; padding: 20px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+    .steps li::before {
+      content: counter(step, decimal-leading-zero); display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px;
+      font-family: var(--font-mono); font-weight: 500; color: var(--accent-hover); background: var(--accent-soft);
+    }
+    .steps strong { display: block; font-family: var(--font-display); font-size: 1.12rem; letter-spacing: -0.02em; }
+    .steps span { display: block; margin-top: 4px; font-size: .95rem; color: var(--ink-soft); }
+
+    /* ---------- contact ---------- */
+    .contact { background: var(--sand); border-top: 1px solid var(--line); }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 64px; align-items: start; }
+    .contact-list { list-style: none; margin: 34px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+    .contact-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .contact-list .label { color: var(--ink-soft); }
+    .contact-list .value { font-weight: 600; text-decoration: none; text-align: right; }
+    .contact-list a.value:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+    .contact-note { margin-top: 20px; font-size: .9rem; color: var(--ink-soft); }
+
+    .form-card { background: var(--card); border: 2px solid var(--ink); border-radius: 22px; box-shadow: 8px 8px 0 var(--ink); overflow: hidden; }
+    .ticket { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 28px; background: var(--ink); color: var(--paper); }
+    .ticket-label { color: #bdb4a4; }
+    .ticket-product { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.02em; text-align: right; }
+    .ticket-product.empty { color: #8f8677; font-weight: 500; }
+    .form-body { padding: 28px; }
+    .form-head h3 { font-size: 1.55rem; }
+    .form-head p { margin-top: 6px; font-size: .92rem; color: var(--ink-soft); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: .88rem; font-weight: 600; }
+    .field .req { color: var(--accent); margin-left: 3px; }
+    .field .opt { font-weight: 400; color: var(--ink-soft); }
+    .field input, .field select, .field textarea {
+      width: 100%; font: inherit; font-size: .98rem; color: var(--ink);
+      padding: 13px 14px; border-radius: 10px; background: var(--paper); border: 1.5px solid var(--line);
+      transition: border-color .15s, box-shadow .15s, background-color .15s;
+    }
+    .field input::placeholder, .field textarea::placeholder { color: #9a9182; }
+    .field textarea { min-height: 120px; resize: vertical; }
+    .field select {
+      appearance: none; -webkit-appearance: none; padding-right: 40px; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231a1712' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center;
+    }
+    .field input:hover, .field select:hover, .field textarea:hover { border-color: #b9ae98; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; background: #fff; border-color: var(--ink); box-shadow: 0 0 0 4px rgba(200, 67, 26, .16); }
+    .field.invalid input, .field.invalid select, .field.invalid textarea { border-color: var(--danger); background: #fffaf9; }
+    .field-error { font-size: .83rem; font-weight: 500; color: var(--danger); }
+    .field-error:empty { display: none; }
+    .field.flash select { animation: flash 1.3s var(--ease); }
+    @keyframes flash { 0% { box-shadow: 0 0 0 0 rgba(200, 67, 26, .55); border-color: var(--accent); } 100% { box-shadow: 0 0 0 12px rgba(200, 67, 26, 0); } }
+    .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .form-actions { margin-top: 24px; }
+    .form-fineprint { margin-top: 12px; text-align: center; font-size: .83rem; color: var(--ink-soft); }
+    .spinner { display: none; width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .35); border-top-color: #fff; animation: spin .7s linear infinite; }
+    .is-submitting .spinner { display: inline-block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .form-status { display: none; margin-top: 18px; padding: 14px 16px; border-radius: 10px; font-size: .93rem; }
+    .form-status.error { display: block; color: var(--danger); background: var(--danger-soft); border: 1px solid #f5b8b0; }
+    .form-success { display: none; text-align: center; padding: 44px 28px 36px; }
+    .form-success .tick { width: 68px; height: 68px; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; color: var(--success); background: var(--success-soft); border: 2px solid var(--success); }
+    .form-success h3 { margin-top: 20px; font-size: 1.5rem; }
+    .form-success p { margin-top: 8px; color: var(--ink-soft); }
+    .form-success .btn { margin-top: 24px; }
+    .form-card.sent .form-body { display: none; }
+    .form-card.sent .form-success { display: block; }
+
+    /* ---------- footer ---------- */
+    .site-footer { background: var(--ink); color: #bdb4a4; padding: 64px 0 28px; font-size: .95rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; }
+    .site-footer .brand { color: var(--paper); }
+    .footer-about { margin-top: 16px; max-width: 34ch; }
+    .site-footer h4 { margin-bottom: 14px; color: var(--paper); font-family: var(--font-mono); font-weight: 500; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; }
+    .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .footer-links a { text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--paper); }
+    .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 52px; padding-top: 22px; border-top: 1px solid #3d372d; font-size: .85rem; color: #8f8677; }
+
+    /* ---------- load motion ---------- */
+    .load { opacity: 0; transform: translateY(12px); animation: rise .7s var(--ease) forwards; }
+    .load.d1 { animation-delay: .05s; } .load.d2 { animation-delay: .14s; } .load.d3 { animation-delay: .22s; } .load.d4 { animation-delay: .3s; } .load.d5 { animation-delay: .4s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 1100px) {
+      .product-row { grid-template-columns: 200px minmax(0, 1fr); gap: 26px; }
+      .row-index { display: none; }
+      .row-side { grid-column: 2; padding-left: 0; border-left: 0; flex-direction: row; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+      .row-side .price-note { order: 3; flex-basis: 100%; margin-top: 0; }
+      .row-side .btn { margin-top: 0; }
+      .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .why-item:nth-child(3) { padding-left: 0; border-left: 0; }
+      .why-item:nth-child(n+3) { border-top: 1px solid #3d372d; margin-top: 24px; }
+    }
+    @media (max-width: 920px) {
+      .nav-toggle { display: grid; }
+      .nav {
+        position: absolute; top: calc(100% + 1px); left: -32px; right: -32px; display: none;
+        flex-direction: column; align-items: stretch; gap: 4px; padding: 12px 32px 20px;
+        background: var(--paper); border-bottom: 2px solid var(--ink);
+      }
+      .nav.open { display: flex; }
+      .nav-links { flex-direction: column; }
+      .nav-links a { padding: 14px 4px; border-radius: 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+      .nav .btn { margin: 12px 0 0; padding: 15px; }
+      .hero-grid, .about-grid, .contact-grid, .section-head { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+      .section-head { gap: 16px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 0 16px; }
+      .nav { left: -16px; right: -16px; padding: 12px 16px 20px; }
+      .hero { padding: 48px 0 64px; }
+      .section { padding: 72px 0; }
+      .finder, .form-card { box-shadow: 5px 5px 0 var(--ink); }
+      .finder-top { grid-template-columns: 1fr; }
+      .finder-media { max-width: 220px; }
+      .product-row { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+      .row-side { grid-column: auto; }
+      .spec-line { grid-template-columns: 1fr 1fr; }
+      .spec-line div + div { border-left: 0; }
+      .spec-line div:nth-child(even) { border-left: 1px solid var(--line); }
+      .spec-line div:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .why-grid { grid-template-columns: minmax(0, 1fr); }
+      .why-item, .why-item + .why-item { padding: 26px 0 4px; border-left: 0; }
+      .why-item + .why-item { border-top: 1px solid #3d372d; margin-top: 18px; }
+      .form-grid { grid-template-columns: minmax(0, 1fr); }
+      .form-body { padding: 22px 18px; }
+      .ticket { padding: 14px 18px; }
+      .hero-actions .btn { flex: 1 1 100%; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; }
+      .load { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="TechSupport home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>
+        </span>
+        <span class="brand-name">TechSupport</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-ink" href="#contact">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow mono load d1">Laptops for work, business and study</span>
+          <h1 class="load d2">Find the right laptop for the work you <em>actually</em> do.</h1>
+          <p class="hero-lead load d3">Explore reliable laptops for work, business, education and everyday productivity. Tell us how you will use it and our team will help you pick a device that fits your needs and your budget.</p>
+          <div class="hero-actions load d4">
+            <a class="btn btn-accent" href="#products">Explore Products <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <a class="btn btn-line" href="#contact">Talk to Our Sales Team</a>
+          </div>
+          <ul class="hero-points load d5">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Advice before you buy</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Options for every budget</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Bulk orders for teams</li>
+          </ul>
+        </div>
+
+        <!-- Need picker: choose a use, see the laptop we suggest -->
+        <aside class="finder load d4" aria-labelledby="finder-title">
+          <div class="finder-head">
+            <h2 id="finder-title">Not sure where to start?</h2>
+            <p>Pick what you will mostly use it for.</p>
+            <div class="chips" id="need-chips" role="group" aria-label="What will you use the laptop for?"></div>
+          </div>
+          <div class="finder-result" id="finder-result" aria-live="polite"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCTS ========== -->
+    <section class="section" id="products">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="section-label mono">The lineup</span>
+            <h2 class="section-title">Laptops ready for real work</h2>
+          </div>
+          <p class="section-intro">Compare the main specifications, then send an enquiry. Our sales team confirms the price, availability and the right configuration for you.</p>
+        </div>
+
+        <!-- Rows are built from the editable product block near the bottom of this file -->
+        <div class="lineup" id="product-list"></div>
+
+        <div class="compare">
+          <div class="compare-head">
+            <h3>Compare side by side</h3>
+            <span class="mono" style="color:var(--ink-soft)">Sample specs</span>
+          </div>
+          <div class="table-scroll" role="region" aria-label="Laptop comparison table" tabindex="0">
+            <table id="compare-table"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE ========== -->
+    <section class="section why" id="why">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="section-label mono">Why us</span>
+            <h2 class="section-title">Why Choose TechSupport?</h2>
+          </div>
+          <p class="section-intro">We focus on helping you choose well, not on selling you more than you need.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-item">
+            <div class="why-num" aria-hidden="true">01</div>
+            <h3>Quality Technology Products</h3>
+            <p>Laptops from established brands, chosen for build quality and everyday reliability.</p>
+          </article>
+          <article class="why-item">
+            <div class="why-num" aria-hidden="true">02</div>
+            <h3>Professional Sales Assistance</h3>
+            <p>Tell us how you will use the laptop and we will explain which option fits and why.</p>
+          </article>
+          <article class="why-item">
+            <div class="why-num" aria-hidden="true">03</div>
+            <h3>Solutions for Different Budgets</h3>
+            <p>Share your budget and we will suggest configurations that make sense for it.</p>
+          </article>
+          <article class="why-item">
+            <div class="why-num" aria-hidden="true">04</div>
+            <h3>Customer Support</h3>
+            <p>Questions after you buy? Reach our team for help with setup and getting started.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="about-text">
+          <span class="section-label mono">About us</span>
+          <h2 class="section-title">Helping you choose the right technology</h2>
+          <p>TechSupport sells laptops and technology products to individuals, students, professionals, businesses and organisations in Nigeria.</p>
+          <p>Choosing a laptop can be confusing. Specifications are hard to compare and it is easy to pay for features you will never use. Our sales team listens to what you need the device for, explains the options in plain terms, and recommends a laptop that suits both the work and the budget.</p>
+          <p>For businesses and organisations buying several devices, we can also help plan the right mix of machines for different roles.</p>
+        </div>
+        <ol class="steps" aria-label="How buying from us works">
+          <li><div><strong>Tell us what you need</strong><span>Your work, your study or your team, plus a rough budget.</span></div></li>
+          <li><div><strong>Get a recommendation</strong><span>We suggest suitable laptops and explain the differences.</span></div></li>
+          <li><div><strong>Confirm price and availability</strong><span>Our team confirms the current price and stock before you decide.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT + ENQUIRY FORM ========== -->
+    <section class="section contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <span class="section-label mono">Contact</span>
+          <h2 class="section-title">Talk to our sales team</h2>
+          <p class="section-intro" style="margin-top:16px">Send an enquiry about any laptop and we will get back to you with a confirmed price and availability.</p>
+          <ul class="contact-list">
+            <li><span class="label mono">Email</span><a class="value" data-contact="email" href="#"></a></li>
+            <li><span class="label mono">Phone</span><a class="value" data-contact="phone" href="#"></a></li>
+            <li><span class="label mono">Country</span><span class="value" data-contact="country"></span></li>
+          </ul>
+          <p class="contact-note">Prices on this page are samples. Our team confirms the final price and stock in its reply.</p>
+        </div>
+
+        <div class="form-card" id="enquiry-card">
+          <div class="ticket">
+            <span class="ticket-label mono">Enquiry for</span>
+            <span class="ticket-product empty" id="ticket-product">No laptop chosen yet</span>
+          </div>
+
+          <div class="form-body">
+            <div class="form-head">
+              <h3>Product enquiry</h3>
+              <p>Fields marked <span style="color:var(--accent)">*</span> are required.</p>
+            </div>
+
+            <form id="enquiry-form" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="f-name">Customer Name<span class="req">*</span></label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" />
+                  <span class="field-error" id="e-name"></span>
+                </div>
+                <div class="field">
+                  <label for="f-email">Email<span class="req">*</span></label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160" />
+                  <span class="field-error" id="e-email"></span>
+                </div>
+                <div class="field">
+                  <label for="f-phone">Phone<span class="req">*</span></label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="e.g. 0803 000 0000" required maxlength="40" />
+                  <span class="field-error" id="e-phone"></span>
+                </div>
+                <div class="field">
+                  <label for="f-budget">Budget <span class="opt">(optional)</span></label>
+                  <select id="f-budget" name="budget">
+                    <option value="">Select a range</option>
+                  </select>
+                  <span class="field-error" id="e-budget"></span>
+                </div>
+                <div class="field full" id="product-field">
+                  <label for="f-product">Product Interested In<span class="req">*</span></label>
+                  <select id="f-product" name="product" required>
+                    <option value="">Choose a laptop</option>
+                  </select>
+                  <span class="field-error" id="e-product"></span>
+                </div>
+                <div class="field full">
+                  <label for="f-message">Customer Message <span class="opt">(optional)</span></label>
+                  <textarea id="f-message" name="message" maxlength="2000" placeholder="What will you use the laptop for? How many do you need?"></textarea>
+                  <span class="field-error" id="e-message"></span>
+                </div>
+                <!-- Spam trap: hidden from people, often filled in by bots -->
+                <div class="hp-field" aria-hidden="true">
+                  <label for="f-website">Website</label>
+                  <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-accent btn-block" type="submit" id="submit-btn">
+                  <span class="spinner" aria-hidden="true"></span>
+                  <span class="btn-label">Send Enquiry</span>
+                </button>
+                <p class="form-fineprint">We only use your details to reply to this enquiry.</p>
+              </div>
+              <div class="form-status" id="form-status" role="alert"></div>
+            </form>
+          </div>
+
+          <div class="form-success" id="form-success" tabindex="-1">
+            <div class="tick" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3>Enquiry sent</h3>
+            <p id="success-detail">Our sales team will contact you soon.</p>
+            <button class="btn btn-line" type="button" id="send-another">Send another enquiry</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#top" aria-label="TechSupport home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>
+            </span>
+            <span class="brand-name">TechSupport</span>
+          </a>
+          <p class="footer-about">Laptops and technology products for individuals, students, professionals and organisations, with advice to help you choose.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a data-contact="email" href="#"></a></li>
+            <li><a data-contact="phone" href="#"></a></li>
+            <li><span data-contact="country"></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> TechSupport. All rights reserved.</span>
+        <span>Product details and prices shown are samples and may change.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== EDITABLE CONTENT: webhook, products, prices, specs, needs, contact ===== -->
+  <script>
+    /*
+      TechSupport product page: ALL editable content lives in this block.
+
+      - To change a laptop: edit its entry in "products" below.
+      - To add a laptop: copy one { ... } block, give it a new unique "id", and edit it.
+      - To remove a laptop: delete its { ... } block (and any "needs" entry that points to its id).
+      - "price" is a plain number in Naira (no commas, no ₦). The page formats it.
+      - "image" is a photo URL. Leave it as "" to show the built-in sample drawing,
+        whose colour is set by "illustration" ("silver", "graphite" or "black").
+      - "needs" are the buttons in the hero picker. Each one points to a product "id".
+
+      Everything here is SAMPLE information. Confirm specs, prices and stock before going live.
+    */
+
+    window.TECHSUPPORT = {
+      // Make.com webhook that receives every enquiry. Leave it as "" to switch the form off;
+      // the form will then show a configuration error instead of pretending to send.
+      makeWebhookUrl: "https://hook.eu1.make.com/n7oj8udg1kxky1bvvafn3v6u44yt2bc1",
+
+      // Contact details shown on the page. These are placeholders, not real details.
+      contact: {
+        email: "sales@example.com",
+        phone: "+234 000 000 0000",
+        country: "Nigeria",
+      },
+
+      // Shown under every price so visitors know it is not a confirmed offer.
+      priceNote: "Sample price. Final price and availability confirmed by our sales team.",
+
+      // Options in the "Budget" dropdown of the enquiry form.
+      budgetOptions: [
+        "Under ₦400,000",
+        "₦400,000 to ₦600,000",
+        "₦600,000 to ₦800,000",
+        "Above ₦800,000",
+        "Not sure yet",
+      ],
+
+      // Buttons in the "Not sure where to start?" picker at the top of the page.
+      needs: [
+        { label: "Meetings and travel", product: "hp-elitebook", why: "Slim and light, with business security features for working on the move." },
+        { label: "Everyday office work", product: "dell-latitude", why: "Solid performance for documents, spreadsheets and video calls at a lower price." },
+        { label: "Heavy multitasking", product: "lenovo-thinkpad", why: "A Core i7 and 16 GB of RAM keep many apps and tabs running smoothly." },
+        { label: "Lots of typing", product: "lenovo-thinkpad", why: "ThinkPad keyboards are known for comfort over long workdays." },
+      ],
+
+      products: [
+        {
+          id: "hp-elitebook",
+          name: "HP EliteBook",
+          category: "Business Laptop",
+          description:
+            "A slim, well-built laptop for office work, meetings and travel, with a comfortable keyboard and business security features.",
+          image: "",
+          illustration: "silver",
+          imageAlt: "Illustration of a silver HP EliteBook laptop",
+          processor: "Intel Core i5 (11th Gen)",
+          ram: "16 GB",
+          storage: "512 GB SSD",
+          screen: '14" Full HD',
+          price: 650000,
+        },
+        {
+          id: "dell-latitude",
+          name: "Dell Latitude",
+          category: "Professional Laptop",
+          description:
+            "A dependable everyday machine for professionals who need solid performance for documents, spreadsheets and video calls.",
+          image: "",
+          illustration: "graphite",
+          imageAlt: "Illustration of a dark grey Dell Latitude laptop",
+          processor: "Intel Core i5 (11th Gen)",
+          ram: "8 GB",
+          storage: "256 GB SSD",
+          screen: '14" Full HD',
+          price: 520000,
+        },
+        {
+          id: "lenovo-thinkpad",
+          name: "Lenovo ThinkPad",
+          category: "Business and Productivity Laptop",
+          description:
+            "Known for its keyboard and durability. A good fit for heavy multitasking, long workdays and users who type a lot.",
+          image: "",
+          illustration: "black",
+          imageAlt: "Illustration of a black Lenovo ThinkPad laptop",
+          processor: "Intel Core i7 (11th Gen)",
+          ram: "16 GB",
+          storage: "512 GB SSD",
+          screen: '14" Full HD',
+          price: 720000,
+        },
+      ],
+    };
+  </script>
+
+  <!-- ===== Page behaviour (no need to edit) ===== -->
+  <script>
+    /*
+      Content comes from the editable block above (window.TECHSUPPORT).
+      The form sends each enquiry straight to the Make webhook as JSON.
+    */
+    (function () {
+      "use strict";
+
+      const DATA = window.TECHSUPPORT;
+      const OTHER_OPTION = "Not sure yet, please advise";
+      const naira = new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", maximumFractionDigits: 0 });
+      const SPECS = [
+        { key: "processor", label: "Processor" },
+        { key: "ram", label: "RAM" },
+        { key: "storage", label: "Storage" },
+        { key: "screen", label: "Screen size" },
+      ];
+      const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const byId = (id) => DATA.products.find((p) => p.id === id);
+
+      // Escape text before putting it into HTML, so data can never inject markup.
+      function esc(value) {
+        return String(value == null ? "" : value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      }
+
+      /* ---------- reusable pieces ---------- */
+
+      const LAPTOP_COLOURS = {
+        silver:   { lid: "#d9dde3", base: "#e6e9ee", edge: "#9aa3af", dot: "" },
+        graphite: { lid: "#5b626d", base: "#6b7380", edge: "#3a4049", dot: "" },
+        black:    { lid: "#2a2c30", base: "#34373c", edge: "#15171a", dot: "#e2231a" },
+      };
+      function LaptopIllustration(colour, label) {
+        const c = LAPTOP_COLOURS[colour] || LAPTOP_COLOURS.silver;
+        return `<svg viewBox="0 0 480 300" role="img" aria-label="${esc(label)}" xmlns="http://www.w3.org/2000/svg">
+          <rect x="92" y="16" width="296" height="194" rx="12" fill="${c.lid}" stroke="#1a1712" stroke-width="3"/>
+          <rect x="106" y="30" width="268" height="166" rx="5" fill="#fffdf8" stroke="#1a1712" stroke-width="2"/>
+          <rect x="122" y="46" width="70" height="9" rx="4.5" fill="#1a1712"/>
+          <rect x="122" y="68" width="110" height="64" rx="6" fill="#fbe6da"/>
+          <polyline points="132,118 150,102 168,110 186,88 206,96 222,80" fill="none" stroke="#c8431a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="246" y="68" width="112" height="10" rx="5" fill="#1a1712" opacity=".75"/>
+          <rect x="246" y="88" width="90" height="8" rx="4" fill="#dcd3c1"/>
+          <rect x="246" y="104" width="100" height="8" rx="4" fill="#dcd3c1"/>
+          <rect x="246" y="120" width="64" height="8" rx="4" fill="#dcd3c1"/>
+          <rect x="122" y="148" width="236" height="10" rx="5" fill="#ece5d6"/>
+          <rect x="122" y="166" width="160" height="10" rx="5" fill="#ece5d6"/>
+          <path d="M54 218 H426 L454 258 Q456 268 444 268 H36 Q24 268 26 258 Z" fill="${c.base}" stroke="#1a1712" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="200" y="252" width="80" height="7" rx="3.5" fill="${c.edge}"/>
+          ${c.dot ? `<circle cx="240" cy="238" r="4.5" fill="${c.dot}"/>` : ""}
+        </svg>`;
+      }
+
+      function ProductVisual(p) {
+        return p.image
+          ? `<img src="${esc(p.image)}" alt="${esc(p.imageAlt || p.name)}" loading="lazy" />`
+          : LaptopIllustration(p.illustration, p.imageAlt || p.name);
+      }
+
+      function ProductRow(p, i) {
+        const specs = SPECS.map((s) => `<div><dt class="mono">${s.label}</dt><dd>${esc(p[s.key])}</dd></div>`).join("");
+        return `
+          <article class="product-row" id="product-${esc(p.id)}">
+            <div class="row-index">${String(i + 1).padStart(2, "0")}</div>
+            <div class="row-media">${ProductVisual(p)}</div>
+            <div class="row-main">
+              <span class="tag mono">${esc(p.category)}</span>
+              <h3 class="product-name">${esc(p.name)}</h3>
+              <p class="product-desc">${esc(p.description)}</p>
+              <dl class="spec-line">${specs}</dl>
+            </div>
+            <div class="row-side">
+              <div><span class="price-label mono">From</span><span class="price">${naira.format(p.price)}</span></div>
+              <p class="price-note">${esc(DATA.priceNote)}</p>
+              <button class="btn btn-ink" type="button" data-enquire="${esc(p.name)}">Enquire About This Laptop</button>
+            </div>
+          </article>`;
+      }
+
+      function CompareTable(products) {
+        const head = `<thead><tr><th scope="col"><span class="sr-only">Specification</span></th>${products.map((p) => `<th scope="col">${esc(p.name)}</th>`).join("")}</tr></thead>`;
+        const rows = [{ key: "category", label: "Category" }].concat(SPECS).map((s) =>
+          `<tr><th scope="row">${s.label}</th>${products.map((p) => `<td>${esc(p[s.key])}</td>`).join("")}</tr>`).join("");
+        const price = `<tr><th scope="row">Sample price</th>${products.map((p) => `<td>${naira.format(p.price)}</td>`).join("")}</tr>`;
+        return head + `<tbody>${rows}${price}</tbody>`;
+      }
+
+      function FinderResult(need, p) {
+        return `
+          <div class="finder-top">
+            <div class="finder-media">${ProductVisual(p)}</div>
+            <div>
+              <span class="finder-match mono">Our suggestion</span>
+              <span class="finder-name">${esc(p.name)}</span>
+              <p class="finder-why">${esc(need.why)}</p>
+            </div>
+          </div>
+          <dl class="finder-specs">${SPECS.map((s) => `<div><dt class="mono">${s.label}</dt><dd>${esc(p[s.key])}</dd></div>`).join("")}</dl>
+          <div class="finder-foot">
+            <span class="finder-price">${naira.format(p.price)}<small>Sample price</small></span>
+            <button class="btn btn-accent" type="button" data-enquire="${esc(p.name)}">Enquire <span class="arrow" aria-hidden="true">&rarr;</span></button>
+          </div>`;
+      }
+
+      function options(select, values) {
+        values.forEach((v) => {
+          const o = document.createElement("option");
+          o.value = v; o.textContent = v;
+          select.appendChild(o);
+        });
+      }
+
+      /* ---------- render content from the data block ---------- */
+
+      document.getElementById("product-list").innerHTML = DATA.products.map(ProductRow).join("");
+      document.getElementById("compare-table").innerHTML = CompareTable(DATA.products);
+
+      const productSelect = document.getElementById("f-product");
+      options(productSelect, DATA.products.map((p) => p.name).concat(OTHER_OPTION));
+      options(document.getElementById("f-budget"), DATA.budgetOptions);
+
+      const { email, phone, country } = DATA.contact;
+      document.querySelectorAll('[data-contact="email"]').forEach((el) => { el.textContent = email; el.href = "mailto:" + email; });
+      document.querySelectorAll('[data-contact="phone"]').forEach((el) => { el.textContent = phone; el.href = "tel:" + phone.replace(/\s+/g, ""); });
+      document.querySelectorAll('[data-contact="country"]').forEach((el) => { el.textContent = country; });
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      /* ---------- hero: need picker ---------- */
+
+      const needs = (DATA.needs || []).filter((n) => byId(n.product));
+      const chips = document.getElementById("need-chips");
+      const result = document.getElementById("finder-result");
+      chips.innerHTML = needs.map((n, i) =>
+        `<button class="chip" type="button" data-index="${i}" aria-pressed="${i === 0}">${esc(n.label)}</button>`).join("");
+
+      function showNeed(i, animate) {
+        const need = needs[i];
+        if (!need) return;
+        chips.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", String(Number(c.dataset.index) === i)));
+        const paint = () => { result.innerHTML = FinderResult(need, byId(need.product)); };
+        if (!animate || reduceMotion) { paint(); return; }
+        result.classList.add("swap");
+        setTimeout(() => { paint(); result.classList.remove("swap"); }, 200);
+      }
+      chips.addEventListener("click", (e) => {
+        const chip = e.target.closest(".chip");
+        if (chip && chip.getAttribute("aria-pressed") !== "true") showNeed(Number(chip.dataset.index), true);
+      });
+      if (needs.length) showNeed(0, false); else document.querySelector(".finder").hidden = true;
+
+      /* ---------- mobile navigation ---------- */
+
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("site-nav");
+      function setNav(open) {
+        nav.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
+      toggle.addEventListener("click", () => setNav(!nav.classList.contains("open")));
+      nav.addEventListener("click", (e) => { if (e.target.closest("a")) setNav(false); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") setNav(false); });
+
+      /* ---------- enquiry form ---------- */
+
+      const card = document.getElementById("enquiry-card");
+      const form = document.getElementById("enquiry-form");
+      const submitBtn = document.getElementById("submit-btn");
+      const btnLabel = submitBtn.querySelector(".btn-label");
+      const statusBox = document.getElementById("form-status");
+      const successBox = document.getElementById("form-success");
+      const productField = document.getElementById("product-field");
+      const ticket = document.getElementById("ticket-product");
+      let submitting = false;
+      let lastSentKey = null;
+
+      // The dark strip on top of the form always shows the chosen laptop.
+      function updateTicket() {
+        const v = productSelect.value;
+        ticket.textContent = v || "No laptop chosen yet";
+        ticket.classList.toggle("empty", !v);
+      }
+      productSelect.addEventListener("change", updateTicket);
+
+      // "Enquire" buttons: prefill the product and scroll to the form.
+      document.addEventListener("click", (e) => {
+        const btn = e.target.closest("[data-enquire]");
+        if (!btn) return;
+        const name = btn.getAttribute("data-enquire");
+        if (card.classList.contains("sent")) resetForm();
+        productSelect.value = name;
+        updateTicket();
+        clearError("product");
+        productField.classList.remove("flash");
+        void productField.offsetWidth; // restart the highlight animation
+        productField.classList.add("flash");
+        document.getElementById("contact").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+        setTimeout(() => document.getElementById("f-name").focus({ preventScroll: true }), 500);
+      });
+
+      const RULES = {
+        name: (v) => (v ? "" : "Enter your name."),
+        email: (v) => (!v ? "Enter your email address." : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : "Enter a valid email address, like name@example.com."),
+        phone: (v) => (!v ? "Enter your phone number." : /^[+()\d\s-]{7,20}$/.test(v) ? "" : "Enter a valid phone number, like 0803 000 0000."),
+        product: (v) => (v ? "" : "Choose a product."),
+      };
+
+      function field(name) { return form.elements[name]; }
+      function showError(name, msg) {
+        const input = field(name);
+        input.closest(".field").classList.add("invalid");
+        input.setAttribute("aria-invalid", "true");
+        input.setAttribute("aria-describedby", "e-" + name);
+        document.getElementById("e-" + name).textContent = msg;
+      }
+      function clearError(name) {
+        const input = field(name);
+        input.closest(".field").classList.remove("invalid");
+        input.removeAttribute("aria-invalid");
+        document.getElementById("e-" + name).textContent = "";
+      }
+      function validate() {
+        let firstBad = null;
+        Object.keys(RULES).forEach((name) => {
+          const msg = RULES[name](field(name).value.trim());
+          if (msg) { showError(name, msg); firstBad = firstBad || field(name); } else { clearError(name); }
+        });
+        if (firstBad) firstBad.focus();
+        return !firstBad;
+      }
+      // Re-check a field once the person fixes it.
+      Object.keys(RULES).forEach((name) => {
+        const evt = field(name).tagName === "SELECT" ? "change" : "input";
+        field(name).addEventListener(evt, () => {
+          if (field(name).closest(".field").classList.contains("invalid") && !RULES[name](field(name).value.trim())) clearError(name);
+        });
+      });
+
+      function setSubmitting(on) {
+        submitting = on;
+        submitBtn.disabled = on;
+        card.classList.toggle("is-submitting", on);
+        btnLabel.textContent = on ? "Sending..." : "Send Enquiry";
+      }
+      function showStatus(msg) { statusBox.textContent = msg; statusBox.className = "form-status error"; }
+      function clearStatus() { statusBox.textContent = ""; statusBox.className = "form-status"; }
+
+      function resetForm() {
+        form.reset();
+        Object.keys(RULES).forEach(clearError);
+        clearStatus();
+        updateTicket();
+        card.classList.remove("sent");
+      }
+      document.getElementById("send-another").addEventListener("click", () => {
+        resetForm();
+        field("name").focus();
+      });
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (submitting) return; // ignore double clicks while a request is running
+        clearStatus();
+        if (!validate()) return;
+
+        const webhookUrl = (DATA.makeWebhookUrl || "").trim();
+        if (!webhookUrl) {
+          showStatus("Configuration error: the enquiry form is not connected yet (makeWebhookUrl is empty), so your enquiry was not sent. Please contact us by email or phone instead.");
+          return;
+        }
+
+        // Hidden spam-trap field: people never see it, bots often fill it in.
+        if (field("website").value) {
+          card.classList.add("sent");
+          return;
+        }
+
+        // The exact field names the Make scenario expects.
+        const payload = {
+          "Customer Name": field("name").value.trim(),
+          "Email": field("email").value.trim(),
+          "Phone": field("phone").value.trim(),
+          "Product Interested In": field("product").value,
+          "Budget": field("budget").value,
+          "Customer Message": field("message").value.trim(),
+          "Lead Source": "Product Page",
+          "Submission Date": new Date().toISOString(),
+        };
+
+        // Block an identical enquiry that was already sent from this page.
+        const key = JSON.stringify([payload["Customer Name"], payload["Email"], payload["Phone"], payload["Product Interested In"], payload["Budget"], payload["Customer Message"]]);
+        if (key === lastSentKey) {
+          showStatus("This enquiry has already been sent. Change the details to send a new one.");
+          return;
+        }
+
+        setSubmitting(true);
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 15000);
+        try {
+          const res = await fetch(webhookUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+            signal: controller.signal,
+          });
+
+          if (res.ok) {
+            lastSentKey = key;
+            document.getElementById("success-detail").textContent =
+              "Thanks, " + payload["Customer Name"].split(" ")[0] + ". Our sales team will contact you about the " + payload["Product Interested In"] + " soon.";
+            card.classList.add("sent");
+            successBox.focus();
+            return;
+          }
+
+          showStatus("The enquiry service did not accept your enquiry. Try again in a few minutes, or contact us by email or phone.");
+        } catch (err) {
+          showStatus("Your enquiry was not sent because the connection failed. Check your internet connection and try again.");
+        } finally {
+          clearTimeout(timer);
+          setSubmitting(false);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
